@@ -10,9 +10,22 @@ namespace Asteroids
     {
         private View _view;
         private List<Object> _objects;
+        private int _nextIdToAssign;
 
-        internal View View { get => _view; set => _view = value; }
-        internal List<Object> Objects { get => _objects; set => _objects = value; }
+        public View View { get => _view; set => _view = value; }
+        public List<Object> Objects { get => _objects; set => _objects = value; }
+        public int NextIdToAssign {
+            get
+            {
+                _nextIdToAssign++;
+                return _nextIdToAssign;
+            }
+
+            set
+            {
+                _nextIdToAssign = value;
+            }
+        }
 
         public Controller()
         {
@@ -26,6 +39,7 @@ namespace Asteroids
 
             View = new View();
             Objects = new List<Object>();
+            NextIdToAssign = 0;
 
             InitObjects();
 
@@ -34,14 +48,12 @@ namespace Asteroids
 
         public void InitObjects()
         {
-            Objects.Add(new Spaceship() { });
+            Objects.Add(new Spaceship() {Id = NextIdToAssign });
 
             for(int i = 0; i < 20; i++)
             {
-                Objects.Add(new Asteroid() { });
+                Objects.Add(new Asteroid() { Id = NextIdToAssign });
             }
-
-
         }
 
         public void Run()
