@@ -12,10 +12,36 @@ namespace Asteroids
         private int _width;
         private int _id;
         private int _health;
+        private int _direction;
+        private int _velocity;
+        private int _posX;
+        private int _posY;
 
+        public int Direction { get => _direction; set => _direction = value; }
+        public int Velocity { get => _velocity; set => _velocity = value; }
         public int Height { get => _height; set => _height = value; }
         public int Width { get => _width; set => _width = value; }
         public int Id { get => _id; set => _id = value; }
         public int Health { get => _health; set => _health = value; }
+        public int PosX { get => _posX; set => _posX = value; }
+        public int PosY { get => _posY; set => _posY = value; }
+
+        public Object()
+        {
+            Initialise(0);
+        }
+
+        public Object(int newId)
+        {
+            Initialise(newId);
+        }
+
+        public void Initialise(int newId)
+        {
+            Height = 0;
+            Width = 0;
+            Health = 100;
+            Id = newId;
+        }
     }
 }

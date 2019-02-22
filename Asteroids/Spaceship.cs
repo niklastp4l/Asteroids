@@ -8,11 +8,11 @@ namespace Asteroids
 {
     class Spaceship : Object
     {
-        private int _direction;
-        private int _velocity;
 
-        public int Direction { get => _direction; set => _direction = value; }
-        public int Velocity { get => _velocity; set => _velocity = value; }
+        public Spaceship(int newId)
+        {
+            Id = newId;
+        }
 
         public void Shoot()
         {

@@ -5,3 +5,10 @@ c:\users\kaulfuss\source\repos\Asteroids\Asteroids\bin\Debug\Asteroids.exe
 c:\users\kaulfuss\source\repos\Asteroids\Asteroids\bin\Debug\Asteroids.pdb
 c:\users\kaulfuss\source\repos\Asteroids\Asteroids\obj\Debug\Asteroids.exe
 c:\users\kaulfuss\source\repos\Asteroids\Asteroids\obj\Debug\Asteroids.pdb
+C:\Users\Niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.csprojAssemblyReference.cache
+C:\Users\Niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.csproj.CoreCompileInputs.cache
+C:\Users\Niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.exe
+C:\Users\Niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.pdb
+C:\Users\Niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.exe.config
+C:\Users\Niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.exe
+C:\Users\Niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.pdb

@@ -8,5 +8,10 @@ namespace Asteroids
 {
     class Asteroid : Object
     {
+        public Asteroid(int id) 
+        {
+            Id = id;
+        }
+
     }
 }
