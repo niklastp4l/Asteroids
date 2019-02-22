@@ -11,27 +11,45 @@ namespace Asteroids
     {
         private int _width;
         private int _height;
-        private Grid _grid;
 
-        public new int Width { get => _width; set => _width = value; }
-        public new int Height { get => _height; set => _height = value; }
-        public Grid Grid { get => _grid; set => _grid = value; }
+        public new int Width
+        {
+            get
+            {
+                return _width;
+            }
+
+            set
+            {
+                _width = value;
+            }
+        }
+
+        public new int Height
+        {
+            get
+            {
+                return _height;
+            }
+
+            set
+            {
+                _height = value;
+            }
+        }
 
         public View()
         {
-            Width = 300;
-            Height = 300;
-            Grid = new Grid();
 
-            Content = Grid;
-
-            Grid.Background = new SolidColorBrush(Color.FromArgb(100, 0, 0, 0));
-            
         }
-        
+
+        public View(int width, int height)
+        {
+            Width = width;
+            Height = height;
+        }
         public void DrawGameArea(ObjectHandler objHandler)
         {
-
             foreach(var i in objHandler.Spaceships)
             {
                 DrawSpaceship(i.Value);
@@ -48,55 +66,50 @@ namespace Asteroids
             int posX = ship.PosX;
             int posY = ship.PosY;
             int direction = ship.Direction;
-            
-        }
 
+            DrawObject("S", 50, 20);
+        }
         public void DrawAsteroid(Asteroid asteroid)
         {
+            int posX = asteroid.PosX;
+            int posY = asteroid.PosY;
 
+            DrawObject("A", 50, 21);
+        }
+
+        public void DrawObject(String symbol, int posX, int posY)
+        {
+            Console.SetCursorPosition(posX, posY);
+            Write(symbol);
+        }
+
+        public void Write(String text)
+        {
+            Console.Write(text);
+        }
+        public void WriteLine(String text)
+        {
+            Console.WriteLine(text);
+        }
+
+       
+        public String GetUserInput()
+        {
+            return Console.ReadLine();
         }
 
         public void PrintStartScreen()
         {
+            WriteLine("Asteroids Netzwerkspiel");
+            WriteLine("-----------------------");
+        }
+
+        public void Start()
+        {
+            Console.SetWindowSize(Width, Height);
             
-        }
-
-        public static DependencyObject FindInVisualTreeDown(DependencyObject obj, Type type, String tag)
-        {
-            if (obj != null)
-            {
-                if (obj.GetType() == type && ((System.Windows.Controls.Control)obj).Tag == tag)
-                {
-                    return obj;
-                }
-
-                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
-                {
-                    DependencyObject childReturn = FindInVisualTreeDown(VisualTreeHelper.GetChild(obj, i), type, tag);
-                    if (childReturn != null)
-                    {
-                        return childReturn;
-                    }
-                }
-            }
-
-            return null;
-        }
-
-        void button1_Click(object sender, RoutedEventArgs e)
-        {
-
-            if (VisualTreeHelper.GetChildrenCount(GetVisualChild(0)) > 0)               // If we have controls
-            {                                                                           //
-                DependencyObject tmp = VisualTreeHelper.GetChild(GetVisualChild(0), 0); // just give me the first...
-                                                                                        //
-                tmp = FindInVisualTreeDown(tmp, typeof(Label), "Test");                 // and search for the
-                                                                                        // one I need.
-                if (tmp != null)
-                    ((Label)tmp).Content = "Ups das war es auch schon wieder";
-                else
-                    MessageBox.Show("Tag not found!");
-            }
+            PrintStartScreen();
+            
         }
     }
 }

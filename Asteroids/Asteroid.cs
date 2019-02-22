@@ -11,6 +11,7 @@ namespace Asteroids
         public Asteroid(int id) 
         {
             Id = id;
+
         }
 
     }

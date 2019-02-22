@@ -12,9 +12,46 @@ namespace Asteroids
     {
         private View _view;
         private ObjectHandler _objects;
+        private NetworkHandler _nwHandler;
 
-        public View View { get => _view; set => _view = value; }
-        public ObjectHandler Objects{ get => _objects; set => _objects = value; }
+        internal ObjectHandler Objects
+        {
+            get
+            {
+                return _objects;
+            }
+
+            set
+            {
+                _objects = value;
+            }
+        }
+
+        internal View View
+        {
+            get
+            {
+                return _view;
+            }
+
+            set
+            {
+                _view = value;
+            }
+        }
+
+        internal NetworkHandler NwHandler
+        {
+            get
+            {
+                return _nwHandler;
+            }
+
+            set
+            {
+                _nwHandler = value;
+            }
+        }
 
         public Controller()
         {
@@ -23,20 +60,37 @@ namespace Asteroids
 
         public void Initialise()
         {
-            View = new View();
+            View = new View(150, 50);
             
             Objects = new ObjectHandler();
 
             
         }
 
+        public void InitialiseNetworkHandler(String mode)
+        {
+            if(mode == "1")
+            {
+                NwHandler = new NetworkHandler(1);
+            }
+            else
+            {
+                NwHandler = new NetworkHandler(2);
+            }
+        }
+
         public void Run()
         {
-            View.DrawGameArea(Objects);
+            String input = "";
+            View.Start();
 
-            (new Application()).Run(new View());
+            View.WriteLine("Server (1) oder Client-Installation(2)?");
+            input = View.GetUserInput();
+            InitialiseNetworkHandler(input);
+
+
             
-            
+            View.DrawGameArea(Objects);
         }
     }
 }

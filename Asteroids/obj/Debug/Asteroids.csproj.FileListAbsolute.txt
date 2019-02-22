@@ -12,3 +12,9 @@ C:\Users\Niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.pdb
 C:\Users\Niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.exe.config
 C:\Users\Niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.exe
 C:\Users\Niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.pdb
+C:\Users\kaulfuss_niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.exe.config
+C:\Users\kaulfuss_niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.exe
+C:\Users\kaulfuss_niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.pdb
+C:\Users\kaulfuss_niklas\Source\Repos\asteroids\Asteroids\obj\Debug\Asteroids.csprojResolveAssemblyReference.cache
+C:\Users\kaulfuss_niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.exe
+C:\Users\kaulfuss_niklas\Source\Repos\asteroids\Asteroids\bin\Debug\Asteroids.pdb

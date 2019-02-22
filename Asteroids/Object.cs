@@ -17,14 +17,109 @@ namespace Asteroids
         private int _posX;
         private int _posY;
 
-        public int Direction { get => _direction; set => _direction = value; }
-        public int Velocity { get => _velocity; set => _velocity = value; }
-        public int Height { get => _height; set => _height = value; }
-        public int Width { get => _width; set => _width = value; }
-        public int Id { get => _id; set => _id = value; }
-        public int Health { get => _health; set => _health = value; }
-        public int PosX { get => _posX; set => _posX = value; }
-        public int PosY { get => _posY; set => _posY = value; }
+        public int Height
+        {
+            get
+            {
+                return _height;
+            }
+
+            set
+            {
+                _height = value;
+            }
+        }
+
+        public int Width
+        {
+            get
+            {
+                return _width;
+            }
+
+            set
+            {
+                _width = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+
+            set
+            {
+                _id = value;
+            }
+        }
+
+        public int Health
+        {
+            get
+            {
+                return _health;
+            }
+
+            set
+            {
+                _health = value;
+            }
+        }
+
+        public int Direction
+        {
+            get
+            {
+                return _direction;
+            }
+
+            set
+            {
+                _direction = value;
+            }
+        }
+
+        public int Velocity
+        {
+            get
+            {
+                return _velocity;
+            }
+
+            set
+            {
+                _velocity = value;
+            }
+        }
+
+        public int PosX
+        {
+            get
+            {
+                return _posX;
+            }
+
+            set
+            {
+                _posX = value;
+            }
+        }
+
+        public int PosY
+        {
+            get
+            {
+                return _posY;
+            }
+
+            set
+            {
+                _posY = value;
+            }
+        }
 
         public Object()
         {
